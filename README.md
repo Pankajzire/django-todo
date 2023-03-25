@@ -2,7 +2,7 @@
 A simple todo app built with django
 
 ![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
+### Setup 1 :To run manually use these steps, To run on Docker directly jump to step 2
 
 
 
@@ -48,24 +48,36 @@ A simple todo app built with django
 
 * Once the server is hosted, head over to http://0.0.0.0:8001/todos for the App.
 
-Cheers and Happy Coding :)
+#### Step 2 : Run using Docker. 
 
+* To install Docker
 
      sudo apt  install docker.io -y
 
+* To list Process running on port 8001 (if followed step 1)
+    
     lsof -i:8001
+    
+* To kill the previous running (if followed step 1)
 
     kill "enter PID of the process"
+    
+* To Create Docker file
 
     vi Dockerfile
+
+* Paste following in vi tab
 
     FROM python:3
     RUN pip install django==4.1.7
     COPY . .
     CMD ["python","manage.py","runserver","0.0.0.0:8001"]
 
+* To build Docker Image
 
     sudo docker build . -t todo-app
+
+* To list running Docker Images
 
     sudo docker ps
 
