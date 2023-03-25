@@ -16,11 +16,14 @@ A simple todo app built with django
 
 * run the following command
 
-    cd django-todo
+      cd django-todo
 
-    pip install django
+      pip install django
+      
 * to install python    
-    sudo apt install python3-pip -y
+
+     sudo apt install python3-pip -y
+     
 ```bash
  python3 manage.py makemigrations
 ```
