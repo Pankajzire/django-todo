@@ -80,6 +80,8 @@ A simple todo app built with django
 * To list running Docker Images
 
       sudo docker ps
+      
+* To run Docker Image
 
       sudo docker run -p 8001:8001 "enter container ID"
 
