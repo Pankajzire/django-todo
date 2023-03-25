@@ -7,15 +7,15 @@ To get this repository, run the following command inside your git enabled termin
 ```bash
 $ git clone https://github.com/Pankajzire/django-todo.git
 ```
-You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
+You will need django to be installed in you computer to run this app. 
 
-Once you have downloaded django, go to the cloned repo directory and run the following command
+run the following command
 
     cd django-todo
 
-    sudo apt install python3-pip -y
-
     pip install django
+    
+    sudo apt install python3-pip -y
 ```bash
  python3 manage.py makemigrations
 ```
