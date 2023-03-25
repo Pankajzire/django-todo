@@ -4,9 +4,11 @@ A simple todo app built with django
 ![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
 ### Setup
 
-Launch EC2 Instance connect to it
 
-To get this repository, run the following command inside your git enabled terminal
+
+
+* Launch EC2 Instance connect to it 
+* To get this repository, run the following command inside your git enabled terminal
 ```bash
  git clone https://github.com/Pankajzire/django-todo.git
 ```
