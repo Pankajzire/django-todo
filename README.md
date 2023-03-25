@@ -56,32 +56,32 @@ A simple todo app built with django
 
 * To list Process running on port 8001 (if followed step 1)
     
-     lsof -i:8001
+      lsof -i:8001
     
 * To kill the previous running (if followed step 1)
 
-     kill "enter PID of the process"
+      kill "enter PID of the process"
     
 * To Create Docker file
 
-     vi Dockerfile
+      vi Dockerfile
 
 * Paste following in vi tab
 
-     FROM python:3
-     RUN pip install django==4.1.7
-     COPY . .
-     CMD ["python","manage.py","runserver","0.0.0.0:8001"]
+      FROM python:3
+      RUN pip install django==4.1.7
+      COPY . .
+      CMD ["python","manage.py","runserver","0.0.0.0:8001"]
 
 * To build Docker Image
 
-     sudo docker build . -t todo-app
+      sudo docker build . -t todo-app
 
 * To list running Docker Images
 
-     sudo docker ps
+      sudo docker ps
 
-     sudo docker run -p 8001:8001 "enter container ID"
+      sudo docker run -p 8001:8001 "enter container ID"
 
 
 Deployed End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.  
