@@ -46,7 +46,7 @@ A simple todo app built with django
 
 * Once the server is hosted, head over to http://0.0.0.0:8001/todos for the App.
 * To keep it running 
-*      nohup python3 manage.py runserver 0.0.0.0:8001
+       nohup python3 manage.py runserver 0.0.0.0:8001
 
 #### Step 2 : Run using Docker. 
 * Launch EC2 Instance(ubuntu) connect to it 
