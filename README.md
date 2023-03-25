@@ -7,7 +7,7 @@ A simple todo app built with django
 
 
 
-* Launch EC2 Instance connect to it 
+* Launch EC2 Instance(ubuntu) connect to it 
 * To get this repository, run the following command inside your git enabled terminal
 ```bash
  git clone https://github.com/Pankajzire/django-todo.git
@@ -47,7 +47,13 @@ A simple todo app built with django
 * Once the server is hosted, head over to http://0.0.0.0:8001/todos for the App.
 
 #### Step 2 : Run using Docker. 
+* Launch EC2 Instance(ubuntu) connect to it 
+ 
+* To get this repository, run the following command inside your git enabled terminal
 
+```bash
+ git clone https://github.com/Pankajzire/django-todo.git
+```
 * To install Docker
 
       sudo apt  install docker.io -y
