@@ -87,7 +87,7 @@ A simple todo app built with django
 
       sudo docker ps
       
-* To run Docker Image
+* To run Docker Image using port(-p) to map ports
 
       sudo docker run -p 8001:8001 "enter container ID"
       
