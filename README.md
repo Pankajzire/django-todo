@@ -22,7 +22,7 @@ A simple todo app built with django
       
 * to install python    
 
-     sudo apt install python3-pip -y
+   sudo apt install python3-pip -y
      
 ```bash
  python3 manage.py makemigrations
