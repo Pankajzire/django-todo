@@ -45,6 +45,8 @@ A simple todo app built with django
 ```
 
 * Once the server is hosted, head over to http://0.0.0.0:8001/todos for the App.
+* To keep it running 
+*      nohup python3 manage.py runserver 0.0.0.0:8001
 
 #### Step 2 : Run using Docker. 
 * Launch EC2 Instance(ubuntu) connect to it 
@@ -88,6 +90,10 @@ A simple todo app built with django
 * To run Docker Image
 
       sudo docker run -p 8001:8001 "enter container ID"
+      
+* To keep it Running use -d (docker deamon) wit it
+
+      sudo docker run -p -d 8001:8001 "enter container ID"
 
 
 Deployed End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.  
