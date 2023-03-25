@@ -93,7 +93,7 @@ A simple todo app built with django
       
 * To keep it Running use -d (docker deamon) wit it
 
-      sudo docker run -p -d 8001:8001 "enter container ID"
+      sudo docker run -d -p  8001:8001 "enter container ID"
 
 
 Deployed End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.  
