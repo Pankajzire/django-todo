@@ -44,10 +44,10 @@ A simple todo app built with django
  python3 manage.py runserver 0.0.0.0:8001
 ```
 
-* Once the server is hosted, head over to http://0.0.0.0:8001/todos for the App.
+* Once the server is hosted, head over to http://0.0.0.0:8000/todos for the App.
 * To keep it running 
 
-       nohup python3 manage.py runserver 0.0.0.0:8001
+       nohup python3 manage.py runserver 0.0.0.0:8000
 
 #### Step 2 : Run using Docker. 
 * Launch EC2 Instance(ubuntu) connect to it 
@@ -78,7 +78,8 @@ A simple todo app built with django
       FROM python:3
       RUN pip install django==4.1.7
       COPY . .
-      CMD ["python","manage.py","runserver","0.0.0.0:8001"]
+      EXPOSE 8000
+      CMD ["python","manage.py","runserver","0.0.0.0:8000"]
 
 * To build Docker Image
 
