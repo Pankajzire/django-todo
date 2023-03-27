@@ -3,7 +3,7 @@
 A simple todo app built with django
 
 ![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup 1 :To run manually use these steps, To run on Docker directly jump to step 2
+### Setup 1 :To run manually use these steps, To run on Docker directly jump to setup 2
 
 
 
@@ -50,7 +50,7 @@ A simple todo app built with django
 
        nohup python3 manage.py runserver 0.0.0.0:8000
 
-#### Step 2 : Run using Docker. 
+#### Setup 2 : Run using Docker. 
 * Launch EC2 Instance(ubuntu) connect to it 
  
 * To get this repository, run the following command inside your git enabled terminal
@@ -100,7 +100,7 @@ A simple todo app built with django
 
 
 
-#### Deploy End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.
+#### Setup 3: Deploy End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.
 
 * Launch EC2 Instance(ubuntu) connect to it 
 
