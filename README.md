@@ -185,6 +185,9 @@ Step - 4 Open port 8080 from AWS Console
 
 10. create 
 11. build
+12. Copy Public IP of your instance open it in new tab with :8000
+
+
 
 
 
