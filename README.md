@@ -1,4 +1,5 @@
 
+
 # django-todo
 A simple todo app built with django
 
@@ -153,9 +154,27 @@ Step - 4 Open port 8080 from AWS Console
 
       sudo apt-get install git
       
-* Install docker 
+* Install Docker 
 
       sudo apt install docker.io -y
+
+* Install Docker compose
+      
+      sudo apt install docker-compose
+
+* docker compose file
+      
+      version : "3.3"
+      services : 
+          web : 
+              build : .
+              ports : 
+                - 8000:8000
+
+
+* to docker compose file is valid or not 
+
+      sudo docker-compose config
 
 
 ## Jenkins Github integration 
@@ -169,7 +188,7 @@ Step - 4 Open port 8080 from AWS Console
 4. Generate token
 5. copy that token and save it later you cannot access it
 
-## Run CloudFormation Using Jenkins PipeLine
+## Run Jenkins project
 
 1. select new item 
 2. name- to do list > Freestyle project
@@ -184,83 +203,10 @@ Step - 4 Open port 8080 from AWS Console
 11. write following commands 
 
     
-*     sudo docker build . -t todo-app
-*     sudo docker run -d -p  8000:8000 todo-app
+*     sudo docker-compose down
+*     sudo docker-compose up -d --force-recreate --no-deps --build web
 
 10. create 
 11. build
 12. Copy Public IP of your instance open it in new tab with :8000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
