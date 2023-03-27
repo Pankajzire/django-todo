@@ -196,8 +196,8 @@ Step - 4 Open port 8080 from AWS Console
 4. SCM- Git
 5. Repository URL- paste the Github url of Repository where you store the files
 6. Credentials > Add > Jenkins 
-7. Kind - Username and password
-8. add Username and Password- personal access token that you created
+7. Kind - secret text
+8. secret text- personal access token that you created
 9. branch- main
 10. Build Steps > add steps > Execute shell
 11. write following commands 
