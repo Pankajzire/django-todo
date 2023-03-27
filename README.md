@@ -152,6 +152,10 @@ Step - 4 Open port 8080 from AWS Console
 * Install git in your system     
 
       sudo apt-get install git
+      
+* Install docker 
+
+      sudo apt install docker.io -y
 
 
 ## Jenkins Github integration 
