@@ -1,3 +1,4 @@
+
 # django-todo
 A simple todo app built with django
 
@@ -95,11 +96,164 @@ A simple todo app built with django
       
 * To keep it Running use -d (docker deamon) wit it
 
-      sudo docker run -d -p  8001:8001 "enter container ID"
-
-
-Deployed End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.  
+      sudo docker run -d -p  8000:8000 "enter container ID"
 
 
 
-  
+#### Deploy End-to-End Web-App by a CICD Pipeline using GitHub, Docker, Jenkin, AWS.
+
+* Launch EC2 Instance(ubuntu) connect to it 
+
+1. IInstall Java:
+
+* Update your system
+ 
+ *     sudo apt update
+
+* Install java
+
+*     sudo apt install openjdk-11-jre -y
+
+* Validate Installation
+
+*     java -version
+
+* It should look something like this
+
+*       openjdk version "11.0.12" 2021-07-20 OpenJDK RuntimeEnvironment (build 11.0.12+7-post-Debian-2) OpenJDK 64-Bit Server VM (build 11.0.12+7-post-Debian-2, mixed mode, sharing)
+
+Step - 2 Install Jenkins
+
+* Just copy these commands and paste them onto your terminal.
+
+
+*     curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \   /usr/share/keyrings/jenkins-keyring.asc > /dev/null 
+*     echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \   https://pkg.jenkins.io/debian binary/ | sudo tee \   /etc/apt/sources.list.d/jenkins.list > /dev/null
+*     sudo apt-get update 
+*     sudo apt-get install jenkins -y
+
+
+Step -3 Start jenkins
+
+*     sudo systemctl enable jenkins
+*     sudo systemctl start jenkins
+*     sudo systemctl status jenkins
+
+Step - 4 Open port 8080 from AWS Console
+
+* take public IP of your Instance Open it in new tab with :8080
+
+*  to get the password use this command
+           
+       sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+      
+* Install suggested plugins
+
+* Install git in your system     
+
+      sudo apt-get install git
+
+
+## Jenkins Github integration 
+
+1. Open Github on your browser
+2. Click on Profile > Settings >  Developer settings >  Personal access tokens > Generate new tokens
+* Note- jenkins-cicd
+3. select :
+* repo
+* workflow
+4. Generate token
+5. copy that token and save it later you cannot access it
+
+## Run CloudFormation Using Jenkins PipeLine
+
+1. select new item 
+2. name- to do list > Freestyle project
+3. Source Code Management- script from SCM 
+4. SCM- Git
+5. Repository URL- paste the Github url of Repository where you store the files
+6. Credentials > Add > Jenkins 
+7. Kind - Username and password
+8. add Username and Password- personal access token that you created
+9. branch- main
+10. Build Steps > add steps > Execute shell
+11. write following commands 
+
+    
+*     sudo docker build . -t todo-app
+*     sudo docker run -d -p  8000:8000 todo-app
+
+10. create 
+11. build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
